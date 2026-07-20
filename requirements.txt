@@ -1,9 +1,12 @@
-pandas
-numpy
-seaborn
-matplotlib
-scikit-learn
-xgboost
-joblib
-notebook
-ipykernel
+# Runtime dependencies for the FastAPI prediction service (api/, src/).
+# NOTE: this intentionally does NOT include the notebook/EDA/training
+# dependencies (jupyter, tensorflow, torch, transformers, etc.) - those are
+# only needed locally to explore data and train models, not to serve
+# predictions from the already-trained models/final_model.pkl.
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.11.7
+pandas==2.3.1
+numpy==1.26.4
+scikit-learn==1.7.1
+joblib==1.5.1
